@@ -1,9 +1,11 @@
 #!/bin/bash
 
+cd /home/ipv6
 
 add_ipv6_fun(){
-
+    
     ipv6_addr_fn="ipv6_addr.txt"
+
     for ipaddr in `cat $ipv6_addr_fn`
     do
         addr=`ip a | grep inet6 | grep $ipaddr`
@@ -30,7 +32,7 @@ else
 fi
 
 
-
+date +%Y%m%d%H%M%S >> run.log
 
 
 
