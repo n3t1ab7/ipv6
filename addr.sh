@@ -1,4 +1,5 @@
 #!/bin/bash
+start=`date +%s` ls -al >/dev/null 2>&1
 
 cd /home/ipv6
 
@@ -33,6 +34,12 @@ fi
 
 
 date +%Y%m%d%H%M%S >> run.log
+
+end=`date +%s` 
+
+dif=$[ end - start ] 
+
+echo $dif >> /home/ip6.txt
 
 
 
